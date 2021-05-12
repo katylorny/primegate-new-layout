@@ -1,0 +1,30 @@
+.sub-menu {
+    margin-top: 40px;
+}
+
+.sub-menu__item {
+    a {
+        padding: 9px 5px 12px 10px;
+        color: $color-lightgray2;
+        font-size: 12px;
+        line-height: 11px;
+
+        &:hover {
+            color: $color-dark;
+        }
+    }
+
+    .nested-menu-list {
+        height: 0;
+        background: #e8e8ed;
+    }
+}
+
+.sub-menu__item.active {
+    background-color: #f8f7f8;
+
+}
+
+.sub-menu__sub-item.active a {
+    color: $color-dark;
+}

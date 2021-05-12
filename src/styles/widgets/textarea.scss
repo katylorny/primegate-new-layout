@@ -1,0 +1,42 @@
+.text-area-holder {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.text-area-holder label {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    max-width: 87%;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    color: #8f9399;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    white-space: nowrap;
+    transition: .2s;
+    font-size: 13px;
+}
+
+.text-area-holder textarea {
+    border-color: #1f2229;
+    width: 100%;
+    display: block;
+    padding: 0 3rem 0 2rem;
+    margin: 0 0 2rem;
+    min-width: 9rem;
+    border: none;
+    border-bottom: 0.2rem solid #8f9399;
+    padding-left: 0;
+    background-color: transparent;
+    margin-bottom: 0 !important;
+    position: relative;
+    z-index: 1;
+    transition: .4s;
+    overflow: auto;
+    resize: none;
+    height: 130px;
+    padding-top: 30px !important;
+}

@@ -1,0 +1,102 @@
+.radio-tab_group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.radio-tab {
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 1.8rem;
+}
+
+.radio-tab input:checked + .radio-label {
+    border-color: #000000;
+}
+
+.radio-tab .radio-tab__label, .radio-tab label {
+    font-size: 16px;
+    padding: 16px 48px 16px 12px;
+    line-height: 1;
+    border: 2px solid #8f9399;
+    border-radius: 4px;
+    margin-right: 1rem;
+    transition: .4s;
+    will-change: border-color;
+
+}
+
+.radio-tab .radio-label::before {
+    background: #F2F3F4;
+    border-color: #8f9399;
+    height: 19px;
+    width: 19px;
+    top: calc(50% - .65em);
+    left: auto !important;
+    right: .8em;
+    box-sizing: border-box;
+    will-change: border;
+    transition: border .2s;
+}
+
+.radio-tab .radio:checked + .radio-label::before {
+    border: 7px solid #3fcbff;
+}
+
+.filter-options {
+    color: #1f2229;
+    //font: 1.6rem/1.375 "tele2_textsans_regular", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    max-height: 1000000px;
+    list-style: none;
+    //border-bottom: 1px solid #d1dbd6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.filter-options li {
+    list-style: none;
+    box-sizing: border-box;
+    max-height: 1000000px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    border-bottom: 3px solid transparent;
+    height: 30px;
+    //padding: 0 13px;
+    margin: 0 13px -2px;
+    transition: .4s;
+    color: #1f2229;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+        color: #1f2229;
+        border-bottom-color: $color-blue;
+    }
+}
+
+.filter-options li.active {
+    color: #1f2229;
+    border-bottom-color: $color-blue;
+}
+
+.tab-container {
+    padding: 20px;
+    display: none;
+}
+
+.tab-container.active {
+    display: block;
+}
+
+.filter-options li.disabled {
+    cursor: default;
+    opacity: 0.5;
+    &:hover {
+        border-bottom: transparent;
+    }
+}

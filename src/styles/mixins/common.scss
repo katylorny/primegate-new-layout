@@ -1,0 +1,7 @@
+@mixin fontSerif($fontFamily) {
+    font-family: $fontFamily, "Times New Roman", serif;
+}
+
+@mixin fontSansSerif($fontFamily) {
+    font-family: $fontFamily, "Arial", sans-serif;
+}

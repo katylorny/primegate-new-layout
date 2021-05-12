@@ -1,0 +1,105 @@
+extends common/layout
+
+block content
+    main.main
+        .wrapper(style="padding: 20px; display: flex; flex-direction: column; align-items: flex-start")
+            //button.btn.btn-black Кнопка
+            //a.btn.btn-black.btn--small Маленькая кнопка
+            //a.btn.btn-black.btn--medium Средняя кнопка
+            //a.btn Контурная кнопка
+            //a.btn.btn--small Контурная кнопка
+            //
+            //.check-wrap
+            //    input#check01.checkbox(type='checkbox')
+            //    label.checkbox-label(for='check01') Чекбокс с подписью
+            //
+            //.check-wrap
+            //    input#check02.checkbox(type='checkbox')
+            //    label.checkbox-label(for='check02')
+            //
+            //.check-wrap
+            //    input#check03.checkbox(type='checkbox' disabled)
+            //    label.checkbox-label(for='check03') Заблокирован
+            //
+            //.check-wrap
+            //    input#check04.checkbox(type='checkbox' disabled checked )
+            //    label.checkbox-label(for='check04') Заблокирован и выбран
+            //
+            //.check-wrap
+            //    input#check05.checkbox.error(type='checkbox')
+            //    label.checkbox-label(for='check05') Ошибка
+            //
+            //input#radio01.radio(name='radio01' type='radio')
+            //label.radio-label(for='radio01') Радиокнопка
+            //
+            //input#radio02.radio.error(name='radio02' type='radio')
+            //label.radio-label(for='radio02') Радиокнопка
+
+            //label.switch-wrapper
+            //    input.checkbox(type="checkbox")
+            //    .switch
+            //
+            //
+            //label.switch-wrapper
+            //    input.checkbox(type="checkbox" disabled)
+            //    .switch
+
+            .radio-tab_group
+                .radio-tab
+                    input#tab01.radio(name='tab01' type='radio' checked='')
+                    label.radio-label(for='tab01') 1 &Gcy;&Bcy;
+                .radio-tab
+                    input#tab02.radio(name='tab01' type='radio')
+                    label.radio-label(for='tab02') 3 &Gcy;&Bcy;
+                .radio-tab
+                    input#tab03.radio(name='tab01' type='radio')
+                    label.radio-label(for='tab03') &Dcy;&lcy;&icy;&ncy;&ncy;&acy;&yacy; &pcy;&ocy;&dcy;&pcy;&icy;&scy;&softcy;
+
+
+            ul.filter-options.js-tab-selector
+                li.active(data-target='tab-one')
+                    span.filter-option &Vcy;&kcy;&lcy;&acy;&dcy;&kcy;&acy; 1
+                li(data-target='tab-two').disabled
+                    span.filter-option &Vcy;&kcy;&lcy;&acy;&dcy;&kcy;&acy; c &dcy;&lcy;&icy;&ncy;&ncy;&ycy;&mcy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&mcy;
+                li(data-target='tab-three')
+                    span.filter-option &Vcy;&kcy;&lcy;&acy;&dcy;&kcy;&acy; 3
+
+            .tab-container.tab-one.active
+                p Какой-то текст
+            .tab-container.tab-two
+                p Какой-то другой текст
+            .tab-container.tab-three
+                p Третий текст
+
+            .text-field-holder
+                label(for='someField') &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &tcy;&iecy;&kcy;&scy;&tcy;
+                input#someField.text-field(type='text' name='nameField')
+
+            .text-area-holder
+                label(for='somefield01') &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &tcy;&iecy;&kcy;&scy;&tcy;
+                textarea#somefield01.text-field(name='somefield01')
+
+
+            .select.closed
+                .select__visible Выберите что-нибудь
+                .select__options
+                    ul.dropdown__list
+                        li.select__item
+                            a(href="#") Первая
+                        li.select__item
+                            a(href="#") Вторая
+                        li.select__item
+                            a(href="#") Третья
+                        li.select__item
+                            a(href="#") Четвертая
+                select.select__input
+                    option Первая
+                    option Вторая
+                    option Третья
+                    option Четвертая
+            .text-area-holder
+                label(for='somefield01') &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &tcy;&iecy;&kcy;&scy;&tcy;
+                textarea#somefield01.text-field(name='somefield01')
+
+
+

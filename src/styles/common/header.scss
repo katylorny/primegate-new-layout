@@ -1,0 +1,43 @@
+@import "../utils/variables";
+
+@import "../mixins/common";
+
+.header {
+  min-height: 40px;
+  padding-right: 29px;
+  background-color: #f0f1f2;
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+
+  h2 {
+
+    @include fontSerif($fontDisplaySerif);
+
+    font-size: 19px;
+    font-weight: bold;
+    color: $color-dark;
+    margin: 0 0 0 20px;
+  }
+}
+
+.header__menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+
+  a {
+    color: #80858b;
+
+    @include fontSerif($fontDisplaySerif);
+
+    font-size: 13px;
+    font-weight: normal;
+    margin-left: 23px;
+  }
+}
+
+.header__dropdown {
+  //padding-right: 22px;
+}

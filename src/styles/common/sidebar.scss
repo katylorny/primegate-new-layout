@@ -1,0 +1,144 @@
+.sidebar {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.sidebar.closed {
+
+  .sidebar__sub-menu {
+    display: none;
+  }
+
+  .sidebar__logo {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .sidebar__collapse-button {
+    right: 18px;
+  }
+
+  .sidebar__buttons {
+    display: flex;
+  }
+}
+
+.sidebar__main {
+  background-color: $color-dark;
+  height: 100vh;
+  flex-shrink: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.sidebar__logo {
+  height: 40px;
+  background: $color-dark;
+  position: relative;
+  padding: 8px 34px 7px 5px;
+}
+
+.sidebar__menu {
+  list-style: none;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+
+  a {
+    display: block;
+  }
+}
+
+.sidebar__sub {
+  width: 136px;
+  background-color: #e8e8ed;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: absolute;
+  right: 0;
+  height: 100%;
+
+  .sub-menu {
+    display: none;
+  }
+
+  .sub-menu.active {
+    display: block;
+  }
+}
+
+.sidebar__collapse-button {
+  right: 12px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 13px;
+  //right: -127px;
+  width: 16px;
+  height: 14px;
+  background: url("../img/burger-button-white.svg") no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.sidebar__sub-collapse-button {
+  right: 12px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 13px;
+  width: 16px;
+  height: 14px;
+  background: url("../img/burger-button.svg") no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.sidebar__logo-img {
+  margin-bottom: 2px;
+}
+
+.sidebar__buttons {
+  display: none;
+  flex-direction: column;
+  margin-top: 70px;
+  align-items: center;
+}
+
+.sidebar__button {
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 21px;
+}
+
+.sidebar__button--dialogues {
+  background-image: url("../img/dialogues-button.svg");
+}
+
+.sidebar__button--analytics {
+  background-image: url("../img/analytics-button.svg");
+}
+
+.sidebar__button--crm {
+  background-image: url("../img/crm-button.svg");
+}
+

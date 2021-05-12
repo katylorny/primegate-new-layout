@@ -1,0 +1,39 @@
+@import "../../local_modules/normalize.css/normalize";
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-extralight2;
+    width: 100%;
+    font-family: "Tele2 TextSans Web SHORT", Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+//.main {
+//    padding-left: 104px + 97px;
+//    transition: padding-left 0.4s linear;
+//}
+//
+//.main.full-width {
+//    padding-left: 52px + 15px;
+//}

@@ -1,0 +1,9 @@
+@import "../mixins/common";
+
+input, textarea, select {
+    @include fontSerif($fontTextSans);
+    color: #000;
+    vertical-align: middle;
+    outline: none;
+    border-radius: 0;
+}

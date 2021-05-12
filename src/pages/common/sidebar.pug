@@ -1,0 +1,81 @@
+.sidebar
+  .sidebar__main
+    .sidebar__logo.logo
+      img.sidebar__logo-img(src="img/logo-white.svg" width="47" height="19" alt="Логотип Теле2")
+      img(src="img/tele2-logo-text.svg" alt="Бизнес облако")
+    button.sidebar__collapse-button(type="button" aria-label="Свернуть меню")
+      //img(src="img/burger-button.svg")
+    ul.sidebar__menu.menu.main-list
+      li.menu__item.menu-item
+        a(href="#") Аналитика
+        ul.menu__sub-list.nested-menu-list
+          li.menu__sub-item.menu-item
+            a(href="#" id="email-tracking") Email трекинг
+          li.menu__sub-item.menu-item
+            a(href="#" id="call-tracking") Коллтрекинг
+          li.menu__sub-item.menu-item
+            a(href="#") Сквозная аналитика
+      li.menu__item.menu-item
+        a(href="#") CRM
+        ul.menu__sub-list.nested-menu-list
+          li.menu__sub-item.menu-item
+            a(href="#") Email трекинг
+          li.menu__sub-item.menu-item
+            a(href="#" id="call-tracking-2") Коллтрекинг
+      li.menu__item.menu-item
+        a(href="#") Настройки
+      li.menu__item.menu-item
+        a(href="#") Интеграции
+
+    .sidebar__buttons
+      a.sidebar__button.sidebar__button--dialogues(href="#")
+      a.sidebar__button.sidebar__button--analytics(href="#")
+      a.sidebar__button.sidebar__button--crm(href="#")
+
+  // серая колонка
+
+
+  .sidebar__sub
+    button.sidebar__sub-collapse-button(type="button" aria-label="Свернуть меню")
+    ul.sidebar__menu.sub-menu.main-list(data-list-id="email-tracking")
+      li.sub-menu__item.menu-item
+        a(href="#") Первый список
+        ul.nested-menu-list
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Email трекинг
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Коллтрекинг
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Сквозная аналитика
+      li.sub-menu__item.menu-item
+        a(href="#") История звонков
+      li.sub-menu__item.menu-item
+        a(href="#") Экспорт данных
+      li.sub-menu__item.menu-item
+        a(href="#") Статистика
+
+    ul.sidebar__menu.sub-menu.main-list(data-list-id="call-tracking")
+      li.sub-menu__item.menu-item
+        a(href="#") Второй список
+        ul.nested-menu-list
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Email трекинг
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Коллтрекинг
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Сквозная аналитика
+      li.sub-menu__item.menu-item
+        a(href="#") Экспорт данных
+      li.sub-menu__item.menu-item
+        a(href="#") Статистика
+
+    ul.sidebar__menu.sub-menu.main-list(data-list-id="call-tracking-2")
+      li.sub-menu__item.menu-item
+        a(href="#") Третий список
+        ul.nested-menu-list
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Email трекинг
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Коллтрекинг
+          li.sub-menu__sub-item.menu-item
+            a(href="#") Сквозная аналитика

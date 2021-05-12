@@ -1,0 +1,92 @@
+.select {
+    position: relative;
+    width: 300px;
+    height: 50px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 13px;
+        height: 8px;
+        top: 21px;
+        right: 7px;
+        background: url("../img/shape.svg") no-repeat;
+        -webkit-transform: rotate(
+                180deg
+        );
+        transform: rotate(
+                180deg
+        );
+    }
+}
+
+.select.closed {
+    &::after {
+        transform: none;
+    }
+
+}
+
+.select__visible {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    cursor: pointer;
+    padding: 0 22px;
+    border: 2px solid #7A7A7A;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+        border-color: #1F2229;
+    }
+}
+
+.select__input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0;
+}
+
+.select__options {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: $color-white;
+    display: none;
+    border: 2px solid #E8E8ED;
+    z-index: 3;
+}
+
+.select__item {
+    list-style: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.select__item a {
+    font: 12px "Tele2 TextSans Web SHORT", Arial, sans-serif;
+    display: block;
+    width: 100%;
+    margin: 0;
+    color: #1f2229;
+    padding: 17px 0 17px 25px;
+
+    &:hover {
+        background: #3fcbff;
+    }
+}

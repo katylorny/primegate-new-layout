@@ -1,0 +1,65 @@
+.switch {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    outline: none;
+    user-select: none;
+    width: 52px;
+    border-radius: 18px;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    background-color: #D1D8D6;
+    transition: background-color .3s;
+}
+
+.switch:before {
+    content: "";
+    background: #fff;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin: 2px;
+    display: block;
+    transition: transform .3s;
+}
+
+.switch-wrapper .checkbox {
+    display: none;
+}
+
+.switch-wrapper .checkbox:checked + .switch {
+    background-color: $color-blue;
+
+    &::before {
+        transform: translateX(100%);
+    }
+}
+
+.switch-wrapper .checkbox:disabled + .switch {
+    cursor: default;
+
+    &::before {
+        background-color: #e8e8ed;
+    }
+
+}
+
+
+//
+//.switch.on {
+//    background-color: $color-blue;
+//}
+
+//.switch.on:before {
+//    transform: translateX(100%);
+//}
+
+//.switch.disabled {
+//    cursor: default;
+//}
+
+//.switch.disabled:before {
+//    background-color: #e8e8ed;
+//}

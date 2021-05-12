@@ -1,0 +1,53 @@
+@import "../mixins/common";
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 17px 43px;
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    min-width: 125px;
+    max-width: 100%;
+    border-radius: 3rem;
+    border: 2px solid #1f2229;
+    color: #1f2229;
+    background-color: transparent;
+    transition: .3s;
+    @include fontSerif($fontTextSans);
+    font-weight: bold;
+
+    &--small {
+        padding: 7px 18px;
+        //height: 40px;
+    }
+
+    &--medium {
+        padding: 11px 29px;
+    }
+
+    &:hover {
+        background-color: transparent;
+        border-color: #626469;
+        color: #626469;
+    }
+}
+
+.btn-black {
+    color: white;
+    background: $color-dark;
+
+    &:hover {
+        background: #626469;
+        border-color: #626469;
+        color: #fff;
+    }
+}
+
+.dark-bg .btn {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}

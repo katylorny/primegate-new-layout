@@ -1,0 +1,74 @@
+@import "variables";
+// Файл для подключения нестандартных шрифтов
+$path: "../fonts/";
+
+@font-face {
+    font-family: $fontStencil;
+    src:
+        url($path +'StandardStencil-Bold.woff2') format("woff2"),
+        url($path +'StandardStencil-Bold.woff') format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $fontTextSans;
+    src:
+        url($path +'tele2_textsans-regular.woff2') format("woff2"),
+        url($path +'tele2_textsans-regular.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $fontTextSans;
+    src:
+        url($path +'tele2_textsans-bold.woff2') format("woff2"),
+        url($path +'tele2_textsans-bold.woff') format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $fontDisplaySerif;
+    src:
+        url($path +'Tele2DisplaySerif-Bold.woff2') format("woff2"),
+        url($path +'Tele2DisplaySerif-Bold.woff') format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: $fontDisplaySerif;
+    src:
+        url($path +'Tele2DisplaySerif-Regular.woff2') format("woff2"),
+        url($path +'Tele2DisplaySerif-Regular.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $fontTextSansWebShort;
+    src:
+        url($path +'Tele2TextSans-Bold-shortWeb.woff2') format("woff2"),
+        url($path +'Tele2TextSans-Bold-shortWeb.woff') format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $fontTextSansWebShort;
+    src:
+        url($path +'Tele2TextSans-Regular-shortWeb.woff2') format("woff2"),
+        url($path +'Tele2TextSans-Regular-shortWeb.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

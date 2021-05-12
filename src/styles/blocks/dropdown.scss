@@ -1,0 +1,83 @@
+@import "../mixins/common";
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__btn a {
+    padding-right: 22px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 13px;
+        height: 8px;
+        top: 7px;
+        right: 7px;
+        background: url("../img/shape.svg") no-repeat;
+        transform: rotate(180deg);
+        transition: transform 0.4s ease;
+    }
+}
+
+.dropdown.closed {
+    .dropdown__btn a::after {
+        transform: none;
+    }
+}
+
+.dropdown__content {
+    position: absolute;
+    border: 0 solid #1f2229;
+    top: 31px;
+    left: 23px;
+    background: $color-white;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    z-index: 3;
+    //border: 0;
+}
+
+.dropdown__list {
+    margin: 0;
+    padding: 0;
+    counter-reset: myCounter;
+}
+
+
+.dropdown__item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        color: $color-dark;
+        font-size: 12px;
+        padding: 7px 0 7px 25px;
+
+        @include fontSansSerif($fontTextSansWebShort);
+
+        &:hover {
+            background: $color-blue;
+        }
+    }
+
+    &::before {
+        counter-increment: myCounter;
+        content: counter(myCounter) ".";
+        color: $color-dark;
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+    }
+}
