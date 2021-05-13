@@ -1,43 +1,137 @@
-@import "../utils/variables";
-
-@import "../mixins/common";
-
 .header {
-  min-height: 40px;
-  padding-right: 29px;
-  background-color: #f0f1f2;
-  display: flex;
-  align-items: center;
-  padding-bottom: 4px;
+    background: #f0f1f2;
+    min-height: 40px;
+    padding-right: 29px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-bottom: 4px;
+    padding-left: 40px;
+    transition: all 0.5s ease;
+}
 
-  h2 {
 
-    @include fontSerif($fontDisplaySerif);
+.header.opened-sidebar {
+    padding-left: 190px;
+}
 
-    font-size: 19px;
-    font-weight: bold;
-    color: $color-dark;
-    margin: 0 0 0 20px;
-  }
+
+.header h2 {
+    font: bold 19px "Tele2 DisplaySerif", "Times New Roman", serif;
+    color: #1f2229;
+    margin: 0 0 0 20px
 }
 
 .header__menu {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-
-  a {
-    color: #80858b;
-
-    @include fontSerif($fontDisplaySerif);
-
-    font-size: 13px;
-    font-weight: normal;
-    margin-left: 23px;
-  }
+    margin-left: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    align-self: stretch
 }
 
-.header__dropdown {
-  //padding-right: 22px;
+.header__menu a {
+    color: #80858b;
+    margin-left: 23px;
+    font: 12px "Tele2 TextSans Web SHORT", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.pade-settings-button {
+    background: transparent;
+    border: none;
+    margin-top: 5px;
+    margin-left: 9px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative
+}
+
+.dropdown__btn a {
+    padding-right: 22px;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center
+}
+
+.dropdown__btn a::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 8px;
+    top: 7px;
+    right: 7px;
+    background: url('/img/shape-grey.svg') no-repeat;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+}
+
+.dropdown.closed .dropdown__btn a::after {
+    -webkit-transform: none;
+    transform: none
+}
+
+.dropdown__content {
+    position: absolute;
+    border: 0 solid #1f2229;
+    top: 31px;
+    left: 23px;
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    z-index: 3
+}
+
+.dropdown__list {
+    margin: 0;
+    padding: 0;
+    counter-reset: myCounter
+}
+
+.dropdown__item {
+    list-style: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative
+}
+
+.dropdown__item a {
+    display: block;
+    width: 100%;
+    margin: 0;
+    color: #1f2229;
+    padding: 7px 0 7px 25px;
+
+}
+
+.dropdown__item a:hover {
+    background: #3fcbff
+}
+
+.dropdown__item::before {
+    counter-increment: myCounter;
+    content: counter(myCounter) ".";
+    color: #1f2229;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 10px
 }

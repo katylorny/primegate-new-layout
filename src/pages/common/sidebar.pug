@@ -1,81 +1,79 @@
 .sidebar
-  .sidebar__main
-    .sidebar__logo.logo
-      img.sidebar__logo-img(src="img/logo-white.svg" width="47" height="19" alt="Логотип Теле2")
-      img(src="img/tele2-logo-text.svg" alt="Бизнес облако")
-    button.sidebar__collapse-button(type="button" aria-label="Свернуть меню")
-      //img(src="img/burger-button.svg")
-    ul.sidebar__menu.menu.main-list
-      li.menu__item.menu-item
-        a(href="#") Аналитика
-        ul.menu__sub-list.nested-menu-list
-          li.menu__sub-item.menu-item
-            a(href="#" id="email-tracking") Email трекинг
-          li.menu__sub-item.menu-item
-            a(href="#" id="call-tracking") Коллтрекинг
-          li.menu__sub-item.menu-item
-            a(href="#") Сквозная аналитика
-      li.menu__item.menu-item
-        a(href="#") CRM
-        ul.menu__sub-list.nested-menu-list
-          li.menu__sub-item.menu-item
-            a(href="#") Email трекинг
-          li.menu__sub-item.menu-item
-            a(href="#" id="call-tracking-2") Коллтрекинг
-      li.menu__item.menu-item
-        a(href="#") Настройки
-      li.menu__item.menu-item
-        a(href="#") Интеграции
+    .sidebar-static
+        img.sidebar-static__logo( src='/img/logo-t2.svg')
+        .main-item.with-nested(data-name="analytics")
+            span
+                img( src='/img/icon-analytics.svg' alt='Аналитика')
+        .main-item.with-nested(data-name="crm")
+            span
+                img( src='/img/icon-crm.svg' alt='CRM и диалоги')
+        .main-item(data-name="integrations")
+            span
+                a.router-link-exact-active.router-link-active( href='#/' aria-current='page')
+                    img( src='/img/icon-integrations.svg' alt='Интеграции')
+        .main-item.with-nested(data-name="settings")
+            span
+                img( src='/img/icon-settings.svg' alt='Настройки')
+    .sidebar-additional
+        img.logo( src='/img/tele2-logo-cloud.svg' alt='Теле2 Бизнес-облако')
 
-    .sidebar__buttons
-      a.sidebar__button.sidebar__button--dialogues(href="#")
-      a.sidebar__button.sidebar__button--analytics(href="#")
-      a.sidebar__button.sidebar__button--crm(href="#")
+        .menu-items__nested-list.analytics
+            p.menu-items-title( style='margin-top: 0px;')  &Acy;&ncy;&acy;&lcy;&icy;&tcy;&icy;&kcy;&acy;
+            ul.nested-menu-items
+                li.menu-item
+                    a( href='#/analytics')  &Scy;&kcy;&vcy;&ocy;&zcy;&ncy;&acy;&yacy; &acy;&ncy;&acy;&lcy;&icy;&tcy;&icy;&kcy;&acy;
+                li.menu-item
+                    a( href='#/callback')  &Kcy;&ocy;&lcy;&lcy;&bcy;&iecy;&kcy;
+                li.menu-item
+                    a( href='#/calltracking')  &Kcy;&ocy;&lcy;&lcy;&tcy;&rcy;&iecy;&kcy;&icy;&ncy;&gcy;
 
-  // серая колонка
+        .menu-items__nested-list.crm
+            p.menu-items-title( style='margin-top: 0px;') CRM и диалоги
+            ul.nested-menu-items
+                li.menu-item
+                    a(href='#/contacts')  &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+                li.menu-item
+                    a(href='#/leads')  &Ocy;&bcy;&rcy;&acy;&shchcy;&iecy;&ncy;&icy;&yacy;
+                li.menu-item
+                    a( href='#/deals')  &Scy;&dcy;&iecy;&lcy;&kcy;&icy;
 
 
-  .sidebar__sub
-    button.sidebar__sub-collapse-button(type="button" aria-label="Свернуть меню")
-    ul.sidebar__menu.sub-menu.main-list(data-list-id="email-tracking")
-      li.sub-menu__item.menu-item
-        a(href="#") Первый список
-        ul.nested-menu-list
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Email трекинг
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Коллтрекинг
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Сквозная аналитика
-      li.sub-menu__item.menu-item
-        a(href="#") История звонков
-      li.sub-menu__item.menu-item
-        a(href="#") Экспорт данных
-      li.sub-menu__item.menu-item
-        a(href="#") Статистика
-
-    ul.sidebar__menu.sub-menu.main-list(data-list-id="call-tracking")
-      li.sub-menu__item.menu-item
-        a(href="#") Второй список
-        ul.nested-menu-list
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Email трекинг
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Коллтрекинг
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Сквозная аналитика
-      li.sub-menu__item.menu-item
-        a(href="#") Экспорт данных
-      li.sub-menu__item.menu-item
-        a(href="#") Статистика
-
-    ul.sidebar__menu.sub-menu.main-list(data-list-id="call-tracking-2")
-      li.sub-menu__item.menu-item
-        a(href="#") Третий список
-        ul.nested-menu-list
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Email трекинг
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Коллтрекинг
-          li.sub-menu__sub-item.menu-item
-            a(href="#") Сквозная аналитика
+        .menu-items__nested-list.settings
+            p.menu-items-title( style='margin-top: 0px;')  Настройки
+            ul.nested-menu-items
+                li.menu-item
+                    a( href='#/accessrights')  &Pcy;&rcy;&acy;&vcy;&acy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&acy;
+                li.menu-item
+                    a( href='#/numbers')  &Ncy;&ocy;&mcy;&iecy;&rcy;&acy;
+                li.menu-item
+                    a( href='#/ct-pull-settings')  &Pcy;&ucy;&lcy; &ncy;&ocy;&mcy;&iecy;&rcy;&ocy;&vcy;
+                li.menu-item
+                    a( href='#/et-pull-settings')  &Ncy;&acy;&scy;&tcy;&rcy;&ocy;&jcy;&kcy;&icy; &pcy;&ocy;&dcy;&mcy;&iecy;&ncy;
+                li.menu-item
+                    a( href='#/mail-settings')  &Pcy;&ocy;&chcy;&tcy;&ocy;&vcy;&ycy;&iecy; &ncy;&acy;&scy;&tcy;&rcy;&ocy;&jcy;&kcy;&icy;
+                li.menu-item
+                    a( href='#/deals')  &YAcy;&ncy;&dcy;&iecy;&kcy;&scy; &Mcy;&iecy;&tcy;&rcy;&icy;&kcy;&acy;
+                li.menu-item
+                    a( href='#/deals')  Google Analytics
+                li.menu-item
+                    a( href='#/deals')  AmoCRM
+                li.menu-item
+                    a.menu-item-with-nested( href='#') Виджеты
+                    ul.nested-menu-items
+                        li.menu-item
+                            a( href='#/accessrights')  &Pcy;&rcy;&acy;&vcy;&acy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&acy;
+                        li.menu-item
+                            a( href='#/numbers')  &Ncy;&ocy;&mcy;&iecy;&rcy;&acy;
+                        li.menu-item
+                            a( href='#/ct-pull-settings')  &Pcy;&ucy;&lcy; &ncy;&ocy;&mcy;&iecy;&rcy;&ocy;&vcy;
+                        li.menu-item
+                            a( href='#/et-pull-settings')  &Ncy;&acy;&scy;&tcy;&rcy;&ocy;&jcy;&kcy;&icy; &pcy;&ocy;&dcy;&mcy;&iecy;&ncy;
+                        li.menu-item
+                            a( href='#/mail-settings')  &Pcy;&ocy;&chcy;&tcy;&ocy;&vcy;&ycy;&iecy; &ncy;&acy;&scy;&tcy;&rcy;&ocy;&jcy;&kcy;&icy;
+                        li.menu-item
+                            a( href='#/deals')  &YAcy;&ncy;&dcy;&iecy;&kcy;&scy; &Mcy;&iecy;&tcy;&rcy;&icy;&kcy;&acy;
+                        li.menu-item
+                            a( href='#/deals')  Google Analytics
+                        li.menu-item
+                            a( href='#/deals')  AmoCRM
+                        li.menu-item

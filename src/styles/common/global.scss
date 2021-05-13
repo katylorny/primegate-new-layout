@@ -29,11 +29,13 @@ a {
     text-decoration: none;
 }
 
-//.main {
-//    padding-left: 104px + 97px;
-//    transition: padding-left 0.4s linear;
-//}
-//
-//.main.full-width {
-//    padding-left: 52px + 15px;
-//}
+.main {
+    padding-top: 40px;
+    padding-left: 40px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.main.opened-sidebar {
+    padding-left: 190px;
+}
