@@ -51,15 +51,13 @@ $(document).ready(() => {
         })
     }
 
-    function showChildren(e) {
-        const menuItem = e.currentTarget
-
-        if ($(menuItem.nextSibling).hasClass(`nested-menu-items`) && $(menuItem).hasClass(`opened`)) {
-            $(menuItem).removeClass(`opened`)
-            $(menuItem.nextSibling).removeClass(`opened`)
-        } else if ($(menuItem.nextSibling).hasClass(`nested-menu-items`)) {
-            $(menuItem).addClass(`opened`)
-            $(menuItem.nextSibling).addClass(`opened`)
+    function showChildren(menuItemLink) {
+        if ($(menuItemLink.nextSibling).hasClass(`nested-menu-items`) && $(menuItemLink).hasClass(`opened`)) {
+            $(menuItemLink).removeClass(`opened`)
+            $(menuItemLink.nextSibling).removeClass(`opened`)
+        } else if ($(menuItemLink.nextSibling).hasClass(`nested-menu-items`)) {
+            $(menuItemLink).addClass(`opened`)
+            $(menuItemLink.nextSibling).addClass(`opened`)
         }
     }
 
@@ -72,7 +70,10 @@ $(document).ready(() => {
             $(`.menu-item-with-nested`).removeClass(`opened`)
             $(`.nested-menu-items`).removeClass(`opened`)
         }
+        if ($(clickedLink).hasClass(`menu-item-with-nested`)) {
+            e.preventDefault()
+            showChildren($(clickedLink)[0])
+        }
 
-        showChildren(e)
     }
 })
